@@ -1,0 +1,19 @@
+@startuml
+title C4 Level 1 - BFS and DFS
+
+left to right direction
+skinparam shadowing false
+
+actor User
+
+rectangle "BFS Algorithm" as BFS
+rectangle "DFS Algorithm" as DFS
+
+User --> BFS : Provides graph,\nstart and goal
+User --> DFS : Provides graph,\nstart and goal
+
+BFS --> User : Displays traversal\nor path
+DFS --> User : Displays traversal\nor path
+
+@enduml
+

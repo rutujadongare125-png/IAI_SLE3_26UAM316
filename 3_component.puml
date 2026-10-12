@@ -1,0 +1,33 @@
+
+@startuml
+title Component Diagram - BFS and DFS
+
+left to right direction
+skinparam componentStyle rectangle
+skinparam shadowing false
+
+actor User
+
+package "BFS Components" {
+    component "Graph Input" as BI
+    component "BFS Algorithm" as BFS
+    component "Queue" as Q
+}
+
+package "DFS Components" {
+    component "Graph Input" as DI
+    component "DFS Algorithm" as DFS
+    component "Stack / Recursion" as S
+}
+
+User --> BI : Graph and start node
+BI --> BFS
+BFS --> Q : Visit vertices
+BFS --> User : Traversal order
+
+User --> DI : Graph and start node
+DI --> DFS
+DFS --> S : Explore vertices
+DFS --> User : Traversal order
+
+@enduml
